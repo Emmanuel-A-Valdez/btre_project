@@ -5,8 +5,10 @@ Using psql
 After your first install, and each time you restart your machine you will have to also restart the postgres service, or else you will get a Is the server running? error.
 To start the service, type 
 sudo service postgresql start
+
 To conntect to postgres, type 
 sudo -u postgres psql
+
 You should get a prompt asking for your password. If this doesn’t work, then you can try the second option listed below.
 Switch users to postgres by typing 
 su - postgres
