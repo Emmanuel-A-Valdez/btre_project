@@ -2,12 +2,15 @@ from django.shortcuts import redirect, render
 
 
 def register(request):
-    
+
     context = {
 
     }
-    return render(request, 'accounts/register.html', context)
-
+    if request.method == 'POST':
+        # Register User
+        pass
+    else:
+        return render(request, 'accounts/register.html', context)
 
 
 def login(request):
@@ -15,7 +18,11 @@ def login(request):
     context = {
         
     }
-    return render(request, 'accounts/login.html', context)
+    if request.method == 'POST':
+        # Login User
+        pass
+    else:
+        return render(request, 'accounts/login.html', context)
 
 
 def logout(request):
