@@ -1,41 +1,30 @@
+from django.conf.urls.static import static
+from django.contrib import messages
 from django.shortcuts import redirect, render
 
 
 def register(request):
-
-    context = {
-
-    }
     if request.method == 'POST':
-        # Register User
-        pass
+        messages.error(request, 'Testing error message')
+        return redirect('register')
     else:
-        return render(request, 'accounts/register.html', context)
+        return render(request, 'accounts/register.html')
 
 
 def login(request):
-    
-    context = {
-        
-    }
     if request.method == 'POST':
         # Login User
         pass
     else:
-        return render(request, 'accounts/login.html', context)
+        return render(request, 'accounts/login.html')
 
 
 def logout(request):
-    
     return redirect('index')
 
 
 def dashboard(request):
-    
-    context = {
-
-    }
-    return render(request, 'accounts/dashboard.html', context)
+    return render(request, 'accounts/dashboard.html')
 
 
 
