@@ -9,3 +9,5 @@ db.sqlite3-journal
 /media
 project_env
 /static
+.vscode
+.pytest_cache
